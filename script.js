@@ -97,13 +97,12 @@ if (specialCharacters === true) {
  var lastChoice = thirdChoice
 }
 
-//var password = generatePassword();
-//var passwordText = document.querySelector("#password");
 var passCode =[];
 
 function generatePassword (){
   for (i=0; i< lastChoice.length; i++){
     passCode.push(lastChoice[Math.floor(Math.random()*lastChoice.length)]);
+    
   
     
     
@@ -111,8 +110,11 @@ function generatePassword (){
   }
 }
 
+
 generatePassword();
-console.log(passCode)
+var passwordText = document.querySelector("#password");
+passwordText.value = passCode.join('');
+
 
 //passwordText.value = password;
 
@@ -121,7 +123,8 @@ console.log(passCode)
 }
 
 
-
+//var password = generatePassword();
+//
 
 //Write Password function should create array for possible characters. is Yes lower case push these values into array. For each option push more values into array. In a for loop equal to the number input for length -  choose random index value of your character array. 
 
