@@ -97,7 +97,25 @@ if (specialCharacters === true) {
  var lastChoice = thirdChoice
 }
 
-console.log([lastChoice.length])
+//var password = generatePassword();
+//var passwordText = document.querySelector("#password");
+var passCode =[];
+
+function generatePassword (){
+  for (i=0; i< lastChoice.length; i++){
+    passCode.push(lastChoice[Math.floor(Math.random()*lastChoice.length)]);
+  
+    
+    
+
+  }
+}
+
+generatePassword();
+console.log(passCode)
+
+//passwordText.value = password;
+
 
 
 }
@@ -116,6 +134,7 @@ var passwordText = document.querySelector("#password");
  
 
 passwordText.value = password;
+
 
 */
 
